@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valikoima — Coffee World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Coffee World</h1>
+  <nav>
+    <a href="index.html">Etusivu</a>
+    <a href="valikoima.html">Valikoima</a>
+    <a href="tietoa.html">Tietoa meistä</a>
+    <a href="yhteystiedot.html">Yhteystiedot</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="hero">
+    <h2>Valikoima</h2>
+    <p>Valitse suosikkisi eri alkuperämaista.</p>
+  </section>
+
+  <section class="products">
+
+    <!-- 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=1600&q=80" alt="Brasilia coffee">
+      <div class="content">
+        <h3>Brasilia — Santos</h3>
+        <p>Pehmeä ja pähkinäinen, matala hapokkuus.</p>
+        <div class="row">
+          <span class="price">12,90 €</span>
+          <button onclick="addToCart('Brasilia — Santos', 12.90)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1600&q=80" alt="Kenya coffee">
+      <div class="content">
+        <h3>Kenia — AA</h3>
+        <p>Raikas hapokkuus ja marjaisuus.</p>
+        <div class="row">
+          <span class="price">14,20 €</span>
+          <button onclick="addToCart('Kenia — AA', 14.20)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1600&q=80" alt="Kolumbia coffee">
+      <div class="content">
+        <h3>Kolumbia — Supremo</h3>
+        <p>Täyteläinen ja pehmeä, karamellinen sävy.</p>
+        <div class="row">
+          <span class="price">14,90 €</span>
+          <button onclick="addToCart('Kolumbia — Supremo', 14.90)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1600&q=80" alt="Etiopia coffee">
+      <div class="content">
+        <h3>Etiopia — Yirgacheffe</h3>
+        <p>Kukkainen ja hedelmäinen aromi.</p>
+        <div class="row">
+          <span class="price">13,90 €</span>
+          <button onclick="addToCart('Etiopia — Yirgacheffe', 13.90)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=1600&q=80" alt="Guatemala coffee">
+      <div class="content">
+        <h3>Guatemala — Antigua</h3>
+        <p>Suklainen ja pähkinäinen profiili.</p>
+        <div class="row">
+          <span class="price">13,50 €</span>
+          <button onclick="addToCart('Guatemala — Antigua', 13.50)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?auto=format&fit=crop&w=1600&q=80" alt="Indonesia coffee">
+      <div class="content">
+        <h3>Indonesia — Sumatra</h3>
+        <p>Mausteinen ja maanläheinen, tumma runko.</p>
+        <div class="row">
+          <span class="price">13,80 €</span>
+          <button onclick="addToCart('Indonesia — Sumatra', 13.80)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80" alt="Costa Rica coffee">
+      <div class="content">
+        <h3>Costa Rica — Tarrazú</h3>
+        <p>Puhdas ja makea, sitruksinen vivahde.</p>
+        <div class="row">
+          <span class="price">14,40 €</span>
+          <button onclick="addToCart('Costa Rica — Tarrazú', 14.40)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=80" alt="Peru coffee">
+      <div class="content">
+        <h3>Peru — Organic</h3>
+        <p>Kevyt ja tasapainoinen, pehmeä jälkimaku.</p>
+        <div class="row">
+          <span class="price">13,20 €</span>
+          <button onclick="addToCart('Peru — Organic', 13.20)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=1600&q=80" alt="Vietnam coffee">
+      <div class="content">
+        <h3>Vietnam — Robusta</h3>
+        <p>Vahva ja intensiivinen, paksu crema.</p>
+        <div class="row">
+          <span class="price">12,60 €</span>
+          <button onclick="addToCart('Vietnam — Robusta', 12.60)">Lisää koriin</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="cart">
+    <h2>Kori</h2>
+    <div class="mini">
+      <div>Tuotteita: <strong id="count">0</strong></div>
+      <div>Yhteensä: <strong><span id="total">0.00</span> €</strong></div>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+      <button onclick="clearCart()">Tyhjennä kori</button>
+      <a href="kassa.html" class="checkout-btn">Siirry kassalle</a>
+    </div>
+
+    <p id="last" style="margin-top:12px; color: rgba(245,239,230,.75);"></p>
+  </section>
+
+</div>
+
+<footer>© 2026 Coffee World</footer>
+
+<script>
+  let count = 0;
+  let total = 0;
+
+  function addToCart(name, price) {
+    count++;
+    total += price;
+    document.getElementById("count").textContent = count;
+    document.getElementById("total").textContent = total.toFixed(2);
+    document.getElementById("last").textContent = "Lisätty koriin: " + name;
+  }
+
+  function clearCart() {
+    count = 0;
+    total = 0;
+    document.getElementById("count").textContent = count;
+    document.getElementById("total").textContent = total.toFixed(2);
+    document.getElementById("last").textContent = "Kori tyhjennetty.";
+  }
+
+  function checkout() {
+    alert("Siirryt kassalle. (Demo) Kiitos!");
+  }
+</script>
+
+</body>
+</html>
