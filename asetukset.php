@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 // Tietokanta-asetukset
-$palvelin = "localhost";
-$kayttajatunnus = "";
-$salasana = "";
-$tietokanta = "";
+$palvelin = "mysql.shell.hamk.fi";
+$kayttajatunnus = "trtkm25a_13";
+$salasana = "4U1NaKHn";
+$tietokanta = "trtkm25a_13";
 
 try {
     $pdo = new PDO("mysql:host=$palvelin;dbname=$tietokanta", $kayttajatunnus, $salasana);
