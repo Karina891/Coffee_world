@@ -98,7 +98,7 @@
     <?php
 require_once "asetukset.php";
 
-$stmt = $pdo->query("SELECT id, title FROM news ORDER BY created_at DESC LIMIT 3");
+$stmt = $pdo->query("SELECT id, title FROM news ORDER BY id DESC LIMIT 3");
 $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($news as $n) {
