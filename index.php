@@ -96,15 +96,19 @@
 
   <ul>
     <?php
-    include "asetukset.php";
+require_once "asetukset.php";
 
-    $sql = "SELECT title FROM news ORDER BY date DESC LIMIT 3";
-    $result = $conn->query($sql);
+$stmt = $pdo->query("SELECT id, title FROM news ORDER BY created_at DESC LIMIT 3");
+$news = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    while ($row = $result->fetch_assoc()) {
-      echo "<li>" . $row["title"] . "</li>";
-    }
-    ?>
+foreach ($news as $n) {
+    echo "<li>";
+    echo "<a href='news.php?id=" . (int)$n["id"] . "'>";
+    echo htmlspecialchars($n["title"]);
+    echo "</a>";
+    echo "</li>";
+}
+?>
   </ul>
 </section>
 <footer>
