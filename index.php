@@ -95,16 +95,16 @@
   <div class="section-title">Uusimmat uutiset</div>
 
   <ul>
-    <?php
+     <?php
 require_once "asetukset.php";
 
-$stmt = $pdo->query("SELECT id, title FROM news ORDER BY id DESC LIMIT 3");
-$news = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $pdo->query("SELECT id, otsikko FROM wp_uutiset ORDER BY id DESC LIMIT 3");
+$uutiset = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($news as $n) {
+foreach ($uutiset as $u) {
     echo "<li>";
-    echo "<a href='news.php?id=" . (int)$n["id"] . "'>";
-    echo htmlspecialchars($n["title"]);
+    echo "<a href='news.php?id=" . (int)$u["id"] . "'>";
+    echo htmlspecialchars($u["otsikko"]);
     echo "</a>";
     echo "</li>";
 }
